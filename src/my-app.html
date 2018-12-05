@@ -1,0 +1,140 @@
+<link rel="stylesheet" href="../node_modules/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="../node_modules/leaflet-draw/dist/leaflet.draw.css" />
+<head>
+<style include="shared-styles">
+  :host {
+    display: block;
+
+  }
+  .form-submit-button {
+
+    background: #002855;
+    color: white;
+    border-style: outset;
+    border-color: #002855;
+    height: 50px;
+    width: 100px;
+    font: bold 15px arial, sans-serif;
+    text-shadow:none;
+    display: block;
+    margin: 0 auto;
+    border-radius: 25px;
+  }
+
+  #map-container {
+    width: 60%;
+    height: 90%;
+    padding: 10px;
+    float: left;
+    border-size:2px
+  }
+
+  #wine-form {
+    height: inherit;
+    width: 40%;
+    margin-left: 60%;
+    padding: 10px;
+  }
+
+  #map{
+    width: 100%;
+    height: inherit;
+  }
+
+
+  .header {
+    text-align: center;
+    background-color: #002855;
+    color: #BF9900;
+    font-family: Impact;
+    font-size: 48px;
+    border-radius: 25px;
+    display: block;
+    padding-bottom:10px;
+    padding-top:10px
+  }
+  #secondHeader{
+    color:white;
+    font-size: 27px;
+  }
+
+  p {
+    margin:0
+  }
+
+  .input_field{
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  label{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  input, textarea{
+    display: block;
+    margin: 0 auto;
+    background-color: #FFF5DE;
+  }
+
+  textarea{
+    height: 40%;
+    width: 75%;
+  }
+
+  form {
+    height: inherit;
+  }
+
+
+  #ocr_field{
+    height: 100%;
+  }
+
+  .header img {
+    text-align:center;
+    width: 35%;
+    height: 100%;
+  }
+  .leaflet-container {
+    background: #FFF5DE;
+  }
+
+</style>
+<script>
+  function getText(){
+    var TextValue = document.getElementById("field_content").value;
+    console.log(TextValue);
+  }
+</script>
+</head>
+
+<div class='header'>
+  <img src="images/vinotract.png" alt="logo" />
+    <p id='secondHeader'>
+      A Tesseract Application
+    </p>
+</div>
+<div id='map-container'>
+  <div id='map'></div>
+</div>
+<div id='wine-form'>
+
+  <form action="#" class="simple-form">
+    <div class='input_field'>
+      <label for="field_name">Name</label>
+      <input id="field_name" type="text">
+    </div>
+    <div id="ocr_field"  class='input_field'>
+      <label for="field_content">OCR Read Content</label>
+      <textarea id="field_content">
+        {{text_val}}
+      </textarea>
+      <button class='form-submit-button' onclick='getText()' id='inputButton'>Submit</button>
+    </div>
+  </form>
+  </div>
+</div>
