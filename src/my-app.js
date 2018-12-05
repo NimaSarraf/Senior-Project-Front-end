@@ -10,39 +10,17 @@
 
 import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
 import { setPassiveTouchGestures, setRootPath } from '@polymer/polymer/lib/utils/settings.js';
-// import '@polymer/app-layout/app-drawer/app-drawer.js';
-// import '@polymer/app-layout/app-drawer-layout/app-drawer-layout.js';
-// import '@polymer/app-layout/app-header/app-header.js';
-// import '@polymer/app-layout/app-header-layout/app-header-layout.js';
-// import '@polymer/app-layout/app-scroll-effects/app-scroll-effects.js';
-// import '@polymer/app-layout/app-toolbar/app-toolbar.js';
-// import '@polymer/app-route/app-location.js';
-// import '@polymer/app-route/app-route.js';
-// import '@polymer/iron-pages/iron-pages.js';
-// import '@polymer/iron-selector/iron-selector.js';
-// import '@polymer/paper-icon-button/paper-icon-button.js';
-// import './my-icons.js';
 import {style, map}from 'leaflet';
 import leafletDraw from 'leaflet-draw';
 import leafletDrawCss from 'leaflet-draw/dist/leaflet.draw-src.css'
 import leafletCss from 'leaflet/dist/leaflet.css'
 import template from './my-app.html'
-// const styleElement = document.createElement('dom-module')
-//
-// styleElement.innerHTML =`
-//   <template>
-//     <style>
-//       ${leafletCss}
-//     </style>
-//   </template>
-// `
-// styleElement.register('shared-styles')
 
 
 class MyApp extends PolymerElement {
   static get template() {
     let tag = document.createElement('template');
-    tag.innerHTML = `<style>${leafletCss}</style>${template}`;
+    tag.innerHTML = `<style></style>${template}`;
     return tag;
   //   return html `
   //   <style include='shared-styles'></style>
